@@ -11,15 +11,17 @@ theme = "the theme name, choose from https://classless.alhur.es/themes"
 commit_sha = "if in doubt, go to https://github.com/fiatjaf/classless and copy the 7 characters from the line that says: 'Latest commit xxxxxxx'"
 theme_url = "alternatively, you can just paste a CSS URL here to be included"
 description = "a description of your site, will be used on `body > header` and on the <meta> description, when not overriden by pages (in normal posts, it is overriden by the post summary)."
-show_summaries = false // if you don't want automatic summaries in list pages
+show_summaries = false # if you don't want automatic summaries in list pages
 ```
+
+If you don't set a `theme` and `commit_sha` (or `theme_url`), a random Classless theme will be included for you, and a poorly designed widget will appear on your site from which you'll be able to select themes and experiment with them before choosing one to write to your config file.
 
 Partials that should be overwritten:
 
   * `layouts/partials/aside.html`: the HTML content of the `body > partial` Classless element.
   * `layouts/partials/footer.html`: the HTML content of the `body > partial` Classless element.
 
-All posts (under `content/posts/`) support the following extra parameters:
+All posts (under `content/posts/`) support the following extra (optional) parameters:
 
 ```yaml
 cover: a URL to an image to be used on the `article > header` and on list pages
@@ -29,5 +31,3 @@ tags:
   - array
   - of-tags
 ```
-
-If you don't set a `theme` and `commit_sha` (or `theme_url`), a random Classless theme will be included for you, and a poorly designed widget will appear on your site from which you'll be able to select themes and experiment with them before choosing one to write to your config file.

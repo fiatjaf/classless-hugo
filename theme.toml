@@ -1,4 +1,4 @@
-name = "Classless"
+name = "classless"
 license = "MIT"
 licenselink = "https://github.com/fiatjaf/classless-hugo/blob/master/LICENSE.md"
 description = "The Classless templates and themes implemented in Hugo."
