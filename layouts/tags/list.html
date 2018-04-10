@@ -1,0 +1,23 @@
+{{ define "title" }}tag: {{.Data.Term}} | {{.Site.Title}}{{ end }}
+
+{{ define "description" }}Items tagged as '{{.Data.Term}}' on {{.Site.Title}}{{ end }}
+
+{{ define "main" }}
+<header>
+  <h1>{{.Title}}</h1>
+</header>
+<section>
+  <ul>
+    {{ range .Data.Pages.ByDate }}
+    <li>
+      <article>
+        {{ partial "article-header.html" . }}
+        {{ if $.Site.Params.show_summaries}}
+        <div>{{.Summary}}</div>
+        {{ end }}
+      </article>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

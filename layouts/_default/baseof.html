@@ -1,0 +1,45 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ block "description" . }}{{.Site.Params.description}}{{ end }}">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+  <title>{{ block "title" . }}{{.Site.Title}}{{ end }}</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/fiatjaf/classless/{{$.Param "commit_sha"}}/themes/{{$.Param "theme"}}/theme.css">
+</head>
+<body>
+  <header role="banner">
+    {{ if .Site.Params.cover }}
+    <a href="{{.Site.BaseURL}}"><img src="{{.Site.Params.cover}}"></a>
+    {{ end }}
+    <h1>
+      <a href="{{.Site.BaseURL}}">{{.Site.Title}}</a>
+    </h1>
+    <aside>
+      <p>{{.Site.Params.description}}</p>
+    </aside>
+  </header>
+  <nav>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{.URL}}">{{.Name}}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  <main>
+  {{ block "main" . }}
+  {{ end }}
+  </main>
+  <aside>
+    {{ block "aside" . }}
+      {{ partial "aside.html" . }}
+    {{ end }}
+  </aside>
+  <footer role="contentinfo">
+    {{ block "footer" . }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+  </footer>
+</body>

@@ -1,0 +1,17 @@
+name = "Classless"
+license = "MIT"
+licenselink = "https://github.com/fiatjaf/classless-hugo/blob/master/LICENSE.md"
+description = "The Classless templates and themes implemented in Hugo."
+homepage = "https://classless.alhur.es/"
+tags = ["blog", "personal"]
+features = ["multiple themes", "not extensible"]
+min_version = "0.38.2"
+
+[author]
+  name = "Giovanni T"
+  homepage = "https://fiatjaf.alhur.es/"
+
+[original]
+  name = "Classless"
+  homepage = "https://classless.alhur.es/"
+  repo = "https://github.com/fiatjaf/classless"
