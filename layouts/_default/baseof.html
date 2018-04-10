@@ -5,6 +5,7 @@
   <meta name="description" content="{{ block "description" . }}{{.Site.Params.description}}{{ end }}">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
   <title>{{ block "title" . }}{{.Site.Title}}{{ end }}</title>
+  {{.Hugo.Generator}}
   <link rel="stylesheet" href="https://cdn.rawgit.com/fiatjaf/classless/{{$.Param "commit_sha"}}/themes/{{$.Param "theme"}}/theme.css">
 </head>
 <body>
