@@ -1,12 +1,14 @@
 <header>
   {{ if .Params.cover }}<a href="{{.Permalink}}"><img src="{{.Params.cover}}"></a>{{ end }}
   <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
-  {{ if not .Params.hide_date }}
-  <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "Jan 2, 2006"}}</time>
-  {{ end }}
-  <ul>
-  {{ range .Params.tags }}
-    <li><a href="{{ "/tags/" | relURL }}{{. | urlize}}">{{.}}</a></li>
-  {{ end }}
-  </ul>
+  <aside>
+    {{ if not .Params.hide_date }}
+    <time datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "Jan 2, 2006"}}</time>
+    {{ end }}
+    <ul>
+    {{ range .Params.tags }}
+      <li><a href="{{ "/tags/" | relURL }}{{. | urlize}}">{{.}}</a></li>
+    {{ end }}
+    </ul>
+  </aside>
 </header>
