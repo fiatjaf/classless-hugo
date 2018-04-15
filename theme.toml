@@ -8,7 +8,7 @@ features = ["multiple themes", "not extensible"]
 min_version = "0.38.2"
 
 [author]
-  name = "Giovanni T"
+  name = "fiatjaf"
   homepage = "https://fiatjaf.alhur.es/"
 
 [original]
